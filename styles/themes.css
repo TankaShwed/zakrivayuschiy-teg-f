@@ -4,3 +4,32 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-dark{
+  --text-main: "Inter-Variable.woff2", sans-serif;
+  --text-accent: "PressStart2P-Regular.woff", sans-serif;
+  --wdth-main-text: 465;
+  --wdth-title-text: 785;  
+  --bg-color: #000;
+  --text-color: #00CC14;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-main: "Inter-Variable.woff2", sans-serif;
+        --text-accent: "PressStart2P-Regular.woff", sans-serif;
+        --wdth-main-text: 465;
+        --wdth-title-text: 785;  
+        --bg-color: #000;
+        --text-color: #00CC14;
+    }
+}
+
+:root.theme-light {
+  --text-main: "Inter-Variable.woff2", sans-serif;
+  --text-accent: "PressStart2P-Regular.woff", sans-serif;
+  --wdth-main-text: 400;
+  --wdth-title-text: 700; 
+  --bg-color: #FFF;
+  --text-color: #000;
+}
