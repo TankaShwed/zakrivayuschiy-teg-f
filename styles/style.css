@@ -22,4 +22,11 @@
   line-height: 1.3;
   color: var(--text-color, #000);
   background-color: var(--bg-color, #FFF);
+  background-image: 
+    repeating-linear-gradient(90deg, var(--bg-cover-grad), transparent 2px),
+    repeating-linear-gradient(0deg, var(--bg-cover-grad), transparent 2px),
+    linear-gradient(var(--bg-gradient1), var(--bg-gradient2));
+  background-size: cover;
+  /*background-position: center;*/
+  background-attachment: fixed;
 }

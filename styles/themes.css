@@ -12,6 +12,9 @@
   --wdth-title-text: 785;  
   --bg-color: #000;
   --text-color: #00CC14;
+  --bg-cover-grad: #000000;
+  --bg-gradient1: #007f0c;
+  --bg-gradient2: #004306;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +25,9 @@
         --wdth-title-text: 785;  
         --bg-color: #000;
         --text-color: #00CC14;
+        --bg-cover-grad: #000000;
+        --bg-gradient1: #007f0c;
+        --bg-gradient2: #004306;
     }
 }
 
@@ -32,4 +38,7 @@
   --wdth-title-text: 700; 
   --bg-color: #FFF;
   --text-color: #000;
+  --bg-cover-grad: #d3d3d3;
+  --bg-gradient1: #e7e7e7;
+  --bg-gradient2: #1a1a1a;
 }
