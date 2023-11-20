@@ -17,9 +17,9 @@
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
-    <header class="header">
-      <h1 class="header_title">&lt;/HTML&gt;</h1>
-      <p class="header_subtitle">закрывающий тег</p>
+    <header class="header wdth-content">
+      <a href="#0" class="header_title">&lt;/HTML&gt;</a>
+      <h1 class="header_subtitle">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -46,19 +46,30 @@
         </ul>
       </nav>
     </header>
-    <main class="content">
+    <main class="content wdth-content">
       <article class="content__card">
-        <h2>Фритрек и нулевой спринт: Подготовка к работе</h2>
+        <h2 class="content__card-title">Фритрек и нулевой спринт:<br>Подготовка к работе</h2>
         <img src="./images/image.png"/>
-        <p>Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. 
+        <div class="content__card-text">
+          <p>Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. 
           И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
-        <p>Место для ваших воспоминаний о начале обучения.</p>
-        <button>Like</button>
+          <p>Место для ваших воспоминаний о начале обучения.</p>
+
+          <button class="btn-like">Like</button>
+        </div>
+        <div class="content__card-btn-like">
+        </div>
       </article>
-       <!--дискета, (fill убрать из фигма?)-->
-      <svg viewBox="0 0 29 28" width="29" height="28" fill="none">
-        <use href="#floppy" class="floppy">
-      </svg>
+
+      <button class="footer">
+        <!--дискета, (fill убрать из фигма?)-->
+        <svg viewBox="0 0 29 28" width="29" height="28" fill="none">
+          <use href="#floppy" class="floppy">
+        </svg>
+        Сохранить на память
+      </button>
+       
+      
     </main>
     <script src="./scripts/like.js"></script>
   </body>
