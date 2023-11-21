@@ -13,8 +13,8 @@
     src: local('Inter-Variable'),
     url(./Inter-Variable.woff2) format('woff2 supports variations'),
     url(./Inter-Variable.woff2) format('woff2-variations');
-    /*font-weight: [400] [465];*/
-    /* ?from figma?
+    /*font-weight: [400] [700];
+    ?from figma?
     font-size: 18px;
     font-style: normal;
     line-height: 1.16667;
