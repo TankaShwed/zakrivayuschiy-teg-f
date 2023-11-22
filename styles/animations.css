@@ -12,3 +12,30 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes arrow {
+    from {
+      margin-left: -19px;
+    }
+    to {
+      margin-left: -15px;
+    }
+  }
+
+  @keyframes shadow {
+    /* from {
+      box-shadow: 0px 0px 0px 0px var(--main-color);
+    } */
+    to {
+      box-shadow: 2px 2px 0px 0px var(--main-color);
+    }
+  }
+
+  @keyframes bg {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+  }

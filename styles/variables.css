@@ -11,5 +11,6 @@
   --bg-cover-grad: #d3d3d3;
   --bg-gradient1: #e7e7e7;
   --bg-gradient2: #1a1a1a;
-  --wdth-content: 100vi;
+  --wdth-phone: 100%;
+  --wdth-laptop: 696px;
 }
