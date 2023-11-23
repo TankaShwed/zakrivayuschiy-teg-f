@@ -43,7 +43,7 @@
     </header>
     <main class="content wdth-content">
       <article class="content__card">
-        <h2 class="content__card-title">Фритрек и нулевой спринт:<br>Подготовка к работе</h2>
+        <h2 class="content__card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <picture class="content__card-image">
           <img loading="lazy" class="picture" src="./images/image.png" alt="Грузовичок на фоне ночного неба"/>
           <p>&lt;/HTML&gt;</p>
@@ -69,13 +69,20 @@
           </div>
         </div>
       </article>
-      <button class="save_button" type="button">
-        <svg viewBox="0 0 29 28" width="29" height="28" fill="none" class="img-floppy">
+      <button class="save_button" type="button" onclick="window['dialog-id'].showModal()" aria-controls="dialog-id">
+        <svg class="img-floppy" viewBox="0 0 29 28" width="29" height="28" fill="none">
           <use href="#floppy">
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
     </main>
+    <dialog id="dialog-id" class="dialog">
+      <svg class="dialog__floppy img-floppy" viewBox="0 0 29 28" width="29" height="28" fill="none">
+        <use href="#floppy">
+      </svg>
+      <span class="dialog__text">Вставьте дискету, чтобы продолжить</span>
+      <button class="dialog__btn-close" type="button" onclick="window['dialog-id'].close();">Ok</button>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
