@@ -105,20 +105,13 @@
   width: 100%;
 }
 
-.theme-menu__button:disabled {
-  opacity: 0.6;
-}
-
+.theme-menu__button:disabled,
 .theme-menu__button:active {
   opacity: 0.6;
 }
 
-.theme-menu__button:hover {
-  cursor: pointer;
-}
-
 .theme-menu__button:focus {
-  /*?*/
+  outline: none;
 }
 
 .theme-menu__button:focus-visible {
@@ -205,17 +198,79 @@
 }
 
 /*heart-button*/
-.like-icon-button {
-  background-color: #fff;
+.card__icon-button {
+  background-color: var(--bg-color);
   border: none;
 }
 
-.like-icon-button:focus {
+.card__icon-button:focus {
   outline: none;
 }
 
-.like-icon-button:focus-visible {
+.card__icon-button:focus-visible {
   border: 2px solid var(--main-color);
+}
+
+.card__icon-button:hover .main-body,
+.card__icon-button:hover .core {
+  fill: var(--main-color);
+  cursor: pointer;
+}
+
+.core {
+  transition: fill 0.3s ease-in-out;
+  transition-delay: 0.03s;
+  fill: var(--bg-color);
+}
+
+.main-body {
+  transition: fill 0.05s ease-in-out;
+  transition-delay: 0.3s;
+  fill: var(--bg-color);
+}
+
+.card__icon-button:active .main-body,
+.card__icon-button:active .core {
+  fill: var(--bg-heart);
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--bg-heart);
+  transition: fill 0.3s ease-in-out;
+  transition-delay: 0.06s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--bg-heart);
+  transition: fill 0.3s ease-in-out;
+  transition-delay: 0.06s;
+
+}
+
+.like-icon.is-liked .core {
+  transition: fill 0.3s ease-in-out;
+  transition-delay: 0.03s;
+  fill: var(--bg-heart);
+}
+
+.like-icon.is-liked .heart {
+  animation-delay: 0.1s;
+  animation: heart 0.3s ease-in alternate;
+}
+
+.heart {
+  transform: scale(1);
+}
+
+.like-icon.is-liked .sparks {
+  animation-delay: 0.3s;
+  animation: sparks 0.3s ease-in alternate;
+}
+
+.sparks {
+  animation-delay: 0.3s;
+  opacity: 0;
+  transform: scale(1);
 }
 
 /*like-button*/
@@ -229,12 +284,13 @@
   transition: box-shadow 0.3s linear;
   position: relative;
   overflow: hidden;
-  color: var(--bg-color);
+  color: var(--btn-text-color);
 }
 
+.theme-menu__button:hover,
 .card__like-button:hover,
 .save_button:hover,
-.like-icon-button:hover {
+.card__icon-button:hover {
   cursor: pointer;
 }
 
@@ -245,7 +301,6 @@
 
 .card__like-button:focus-visible {
   animation-direction: normal;
-  /* animation: shadow 0.5s 1 ease-in-out forwards both revert reverse; */
   outline: none;
   box-shadow: 2px 2px 0px 0px var(--main-color);
 }
@@ -296,7 +351,7 @@
   line-height: 0.9;
   position: relative;
   overflow: hidden;
-  color: var(--bg-color);
+  color: var(--btn-text-color);
 }
 
 .save_button::before {
@@ -311,7 +366,7 @@
 .img-floppy {
   z-index: 3;
   mix-blend-mode: difference;
-  color: var(--bg-color);
+  color: var(--btn-text-color);
 }
 
 @media (width >= 375px) {
