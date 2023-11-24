@@ -115,9 +115,6 @@
   outline: none;
 }
 
-.theme-menu__button:focus-visible {
-}
-
 /*main*/
 .content {
   display: flex;
@@ -148,13 +145,42 @@
 }
 
 .content__card-image {
-  /*max-width: -webkit-fill-available;*/
   position: relative;
   background-size: cover;
 }
 
-.picture{
+.picture {
   display: block;
+  max-height: 371px;
+}
+
+/*фильтры для картинок*/
+.pic2 {
+  filter: invert(0.4);
+}
+
+.pic3 {
+  filter: brightness(200%);
+}
+
+.pic4 {
+  filter: saturate(19%);
+}
+
+.pic5 {
+  filter: grayscale(1);
+}
+
+.pic6 {
+  filter: contrast(2);
+}
+
+.pic7 {
+  filter: sepia(0.6) ;
+}
+
+.pic8 {
+  filter: contrast(150%);
 }
 
 .content__card-image p {
@@ -277,7 +303,7 @@
 }
 
 .contour {
-  transition: fill 0.1s linear; /*?Контур лучше возвращать на место побыстрее — линейно, за 0.1s, без задержек?*/
+  transition: fill 0.1s linear;
 }
 
 /*like-button*/
@@ -392,7 +418,6 @@ dialog::backdrop {
   justify-content: center;
   align-items: center;
   gap: 8px;
-
   position: relative;
   overflow: hidden;
   color: var(--btn-text-color);
@@ -426,28 +451,34 @@ dialog::backdrop {
     width: var(--wdth-laptop);
   }
 
-  .header{
-        height: 364px;
+  .header {
+    height: 364px;
   }
 
-  .header_title{
+  .header_title {
     margin-block-start: 127px;
     margin-block-end: 6px;
   }
-  
-  .content__card{
+
+  .content__card {
     width: 696px;
   }
-.content__card-image{
-  width: 100%;
-}
 
-.picture{
-  width: 100%;
-}
+  .content__card-image {
+    width: 100%;
+  }
+
+  .picture {
+    width: 100%;
+  }
+
   .save_button {
     flex-direction: row;
     inline-size: 335px;
     block-size: 51px;
+  }
+
+  .picture {
+    max-height: none;
   }
 }
