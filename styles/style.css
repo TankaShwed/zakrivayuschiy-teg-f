@@ -167,7 +167,7 @@
 
 /*фильтры для картинок*/
 .pic2 {
-  filter: invert(0.4);
+  filter: invert(1) brightness(60%);
 }
 
 .pic3 {
@@ -183,15 +183,15 @@
 }
 
 .pic6 {
-  filter: contrast(2);
+  filter: contrast(2) brightness(0.5) ;
 }
 
 .pic7 {
-  filter: sepia(0.6);
+  filter: sepia(1.6) contrast(2) brightness(2.5);
 }
 
 .pic8 {
-  filter: contrast(150%);
+  filter: blur(3px);
 }
 
 .content__card-image p {
@@ -387,7 +387,7 @@
   align-items: center;
 }
 
-dialog::backdrop {
+.dialog::backdrop {
   background-color: #000;
   opacity: 0.75;
 }
