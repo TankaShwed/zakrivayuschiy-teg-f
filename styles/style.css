@@ -19,7 +19,6 @@
   font-variation-settings: "wdth" var(--wdth-main-text);
   line-height: 1.3;
   color: var(--main-color2, #000);
-  background-color: var(--main-color1, #fff);
   background-image: repeating-linear-gradient(
       90deg,
       var(--bg-cover-grad),
@@ -27,8 +26,13 @@
     ),
     repeating-linear-gradient(0deg, var(--bg-cover-grad), transparent 2px),
     linear-gradient(var(--bg-gradient1), var(--bg-gradient2));
+  background-color: var(--main-color1, #fff);
   background-size: cover;
   background-attachment: fixed;
+  /* background: fixed var(--main-color1, #fff)
+      repeating-linear-gradient(90deg, var(--bg-cover-grad), transparent 2px),
+    repeating-linear-gradient(0deg, var(--bg-cover-grad), transparent 2px),
+    linear-gradient(var(--bg-gradient1), var(--bg-gradient2)) center/cover; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +49,6 @@
   align-items: center;
   flex-wrap: nowrap;
   background-color: var(--main-color1);
-  block-size: 327px;
   margin-block-start: 100px;
   margin-block-end: 100px;
   width: 100%;
@@ -70,14 +73,13 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
 }
 
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
   margin-left: -19px;
-  animation: arrow 0.5s infinite ease-in-out alternate;
 }
 
 .theme-menu__button {
@@ -86,9 +88,9 @@
   background-color: transparent;
   text-transform: uppercase;
   font-size: 14px;
-  margin-inline-start: 21px;
+  margin-inline-start: 18px;
   position: relative;
-  padding-bottom: 2px;
+  padding-bottom: 3px;
 }
 
 .theme-menu__button::after {
@@ -99,11 +101,11 @@
   width: 0;
   height: 2px;
   background-color: var(--main-color2);
-  transition: all 0.3s;
 }
 
 .theme-menu__button:hover {
   cursor: pointer;
+  opacity: 0.6;
 }
 
 .theme-menu__button:hover::after {
@@ -117,6 +119,10 @@
 
 .theme-menu__button:focus {
   outline: none;
+}
+
+.theme-menu {
+  margin-block-end: 20px;
 }
 
 /*main*/
@@ -224,7 +230,6 @@
 }
 
 .content__card-btn-like {
-  height: 38px;
   align-self: end;
   display: flex;
   flex-direction: row;
@@ -252,67 +257,33 @@
   cursor: pointer;
 }
 
-.card__icon-button:hover{
- cursor: pointer;
+.card__icon-button:hover {
+  cursor: pointer;
 }
 
 .core {
-  transition: fill 0.3s ease-in-out;
-  transition-delay: 0.03s;
   fill: var(--main-color1);
 }
 
 .main-body {
-  transition: fill 0.05s ease-in-out;
-  transition-delay: 0.3s;
   fill: var(--main-color1);
 }
 
 .card__icon-button:active .main-body,
-.card__icon-button:active .core {
-  fill: #ff0000;
-}
-
-.like-icon.is-liked .main-body {
-  fill: #ff0000;
-  transition: fill 0.3s ease-in-out;
-  transition-delay: 0.06s;
-}
-
-.like-icon.is-liked .contour {
-  fill: #ff0000;
-  transition: fill 0.3s ease-in-out;
-  transition-delay: 0.06s;
-}
-
+.card__icon-button:active .core,
+.like-icon.is-liked .main-body,
+.like-icon.is-liked .contour,
 .like-icon.is-liked .core {
-  transition: fill 0.3s ease-in-out;
-  transition-delay: 0.03s;
   fill: #ff0000;
-}
-
-.like-icon.is-liked .heart {
-  animation-delay: 0.1s;
-  animation: heart 0.3s ease-in alternate;
 }
 
 .heart {
   transform: scale(1);
 }
 
-.like-icon.is-liked .sparks {
-  animation-delay: 0.3s;
-  animation: sparks 0.3s ease-in alternate;
-}
-
 .sparks {
-  animation-delay: 0.3s;
   opacity: 0;
   transform: scale(1);
-}
-
-.contour {
-  transition: fill 0.1s linear;
 }
 
 /*like-button*/
@@ -321,7 +292,6 @@
   padding: 9px 17px;
   border: 2px solid var(--main-color2);
   background-color: transparent;
-  transition: box-shadow 0.3s linear;
   position: relative;
   overflow: hidden;
 }
@@ -336,7 +306,6 @@
 }
 
 .card__like-button:focus-visible {
-  animation-direction: normal;
   outline: none;
   box-shadow: 2px 2px 0px 0px var(--main-color2);
 }
@@ -346,7 +315,6 @@
   position: absolute;
   inset: 0;
   background-color: var(--main-color2);
-  transition: translate 0.5s ease-in-out;
   translate: -100% 0;
 }
 
@@ -356,7 +324,7 @@
   translate: 0 0;
 }
 
-.save_button:hover{
+.save_button:hover {
   cursor: pointer;
 }
 
@@ -370,6 +338,37 @@
   color: var(--btn-text-color);
   line-height: 0.9;
   background-color: transparent;
+}
+
+/*button save, floppy*/
+.save_button {
+  border: 2px solid var(--main-color2);
+  background-color: var(--main-color1);
+  width: 306px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  color: var(--btn-text-color);
+  margin-block-end: 102px;
+}
+
+.save_button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--main-color2);
+  translate: -100% 0;
+}
+
+.img-floppy {
+  z-index: 3;
+  mix-blend-mode: difference;
+  color: var(--btn-text-color);
 }
 
 /*dialog window*/
@@ -410,63 +409,33 @@ dialog::backdrop {
   width: 293px;
   height: 38px;
   padding: 9px 17px;
-  background-color: inherit;
+  background-color: var(--main-color1);
   margin-block-start: 10px;
   line-height: 0.9;
+  position: relative;
+  overflow: hidden;
+  color: var(--btn-text-color);
+}
+
+.dialog__btn-close::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--main-color2);
+  translate: -100% 0;
+}
+
+.dialog__btn-close:hover::before {
+  translate: 0 0;
 }
 
 .dialog__btn-close:hover {
   cursor: pointer;
 }
 
-/*button save, floppy*/
-.save_button {
-  border: 2px solid var(--main-color2);
-  background-color: var(--main-color1);
-  width: 306px;
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  position: relative;
-  overflow: hidden;
-  color: var(--btn-text-color);
-  margin-block-end: 102px;
-}
-
-.save_button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--main-color2);
-  transition: translate 0.5s ease-in-out;
-  translate: -100% 0;
-}
-
-.img-floppy {
-  z-index: 3;
-  mix-blend-mode: difference;
-  color: var(--btn-text-color);
-}
-
-.dialog-id {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
 @media (width > 375px) {
   .wdth-content {
     width: 696px;
-  }
-
-  .header {
-    height: 364px;
   }
 
   .header_title {

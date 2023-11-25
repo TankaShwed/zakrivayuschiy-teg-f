@@ -2,12 +2,12 @@
 а так же их изменения в зависимости от ширины устройства */
 :root {
   --wdth-main-text: 400;
-  --wdth-title-text: 700; 
-  --main-color1: #FFFFFF;
+  --wdth-title-text: 700;
+  --main-color1: #ffffff;
   --main-color2: #000000;
-  --shadow-color: #FFFFFF;
+  --shadow-color: #ffffff;
   --bg-cover-grad: #d3d3d3;
   --bg-gradient1: #e7e7e7;
   --bg-gradient2: #1a1a1a;
-  --btn-text-color: #FFFFFF;
+  --btn-text-color: #ffffff;
 }
