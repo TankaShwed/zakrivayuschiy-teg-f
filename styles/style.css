@@ -22,10 +22,22 @@
   background-image: repeating-linear-gradient(
       90deg,
       var(--bg-cover-grad),
-      transparent 2px
+      var(--bg-cover-grad) 2px,
+      transparent 2px,
+      transparent 4px
     ),
-    repeating-linear-gradient(0deg, var(--bg-cover-grad), transparent 2px),
-    linear-gradient(var(--bg-gradient1), var(--bg-gradient2));
+    repeating-linear-gradient(
+      0deg,
+      var(--bg-cover-grad),
+      var(--bg-cover-grad) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(
+      var(--bg-gradient1) 0 0.01%,
+      var(--bg-gradient1),
+      var(--bg-gradient2)
+    );
   background-color: var(--main-color1, #fff);
   background-size: cover;
   background-attachment: fixed;
@@ -36,6 +48,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: url(<path-to-image>), lightgray 0% 0% / 50px 50px repeat,
+    linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
 }
 
 .wdth-content {
@@ -57,14 +71,14 @@
   text-transform: uppercase;
 }
 
-.header_title {
+.header-title {
   margin-block-start: 113px;
   margin-block-end: 10px;
   font-size: clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem);
   text-decoration: none;
 }
 
-.header_subtitle {
+.header-subtitle {
   margin-block-end: 18px;
   font-size: clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem);
 }
@@ -183,7 +197,7 @@
 }
 
 .pic6 {
-  filter: contrast(2) brightness(0.5) ;
+  filter: contrast(2) brightness(0.5);
 }
 
 .pic7 {
@@ -355,6 +369,7 @@
   overflow: hidden;
   color: var(--btn-text-color);
   margin-block-end: 102px;
+  padding-block: 15px;
 }
 
 .save_button::before {
@@ -406,9 +421,9 @@
 .dialog__btn-close {
   grid-area: c;
   border: 2px solid var(--main-color2);
-  width: 293px;
+  width: 257px;
   height: 38px;
-  padding: 9px 17px;
+  padding: 9px;
   background-color: var(--main-color1);
   margin-block-start: 10px;
   line-height: 0.9;
@@ -433,12 +448,12 @@
   cursor: pointer;
 }
 
-@media (width > 375px) {
+@media (width >= 375px) {
   .wdth-content {
     width: 696px;
   }
 
-  .header_title {
+  .header-title {
     margin-block-start: 127px;
     margin-block-end: 6px;
   }
@@ -463,5 +478,9 @@
 
   .picture {
     max-height: none;
+  }
+
+  .dialog__btn-close {
+    width: 293px;
   }
 }
