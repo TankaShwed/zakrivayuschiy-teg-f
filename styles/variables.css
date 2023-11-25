@@ -1,16 +1,13 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, 
 а так же их изменения в зависимости от ширины устройства */
 :root {
-  --text-main: "Inter-Variable.woff2", sans-serif;
-  --text-accent: "PressStart2P-Regular.woff", sans-serif;
   --wdth-main-text: 400;
   --wdth-title-text: 700; 
-  --bg-color: #FFF;
-  --main-color: #000;
-  --shadow-color: #fff;
+  --main-color1: #FFFFFF;
+  --main-color2: #000000;
+  --shadow-color: #FFFFFF;
   --bg-cover-grad: #d3d3d3;
   --bg-gradient1: #e7e7e7;
   --bg-gradient2: #1a1a1a;
-  --btn-text-color: #fff;
-  --bg-heart: #ff0000;
+  --btn-text-color: #FFFFFF;
 }

@@ -6,54 +6,40 @@
 */
 
 :root.theme-dark{
-    --text-main: "Inter-Variable.woff2", sans-serif;
-    --text-accent: "PressStart2P-Regular.woff", sans-serif;
+    --text-accent: "Press Start 2P", sans-serif;
     --wdth-main-text: 465;
     --wdth-title-text: 785;  
-    --bg-color: #000000;
-    --main-color: #00CC14;
+    --main-color1: #000000;
+    --main-color2: #00CC14;
     --shadow-color: #000000;
     --bg-cover-grad: #000000;
     --bg-gradient1: #007f0c;
     --bg-gradient2: #004306;
     --btn-text-color: #00CC14;
-    --bg-heart: #ff0000;
-    --wdth-phone: 100vi;
-    --wdth-laptop: 696px;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --text-main: "Inter-Variable.woff2", sans-serif;
-        --text-accent: "PressStart2P-Regular.woff", sans-serif;
         --wdth-main-text: 465;
         --wdth-title-text: 785;  
-        --bg-color: #000000;
-        --main-color: #00CC14;
+        --main-color1: #000000;
+        --main-color2: #00CC14;
         --shadow-color: #000000;
         --bg-cover-grad: #000000;
         --bg-gradient1: #007f0c;
         --bg-gradient2: #004306;
         --btn-text-color: #00CC14;
-        --bg-heart: #ff0000;
-        --wdth-phone: 100vi;
-        --wdth-laptop: 696px;
     }
 }
 
 :root.theme-light {
-    --text-main: "Inter-Variable.woff2", sans-serif;
-    --text-accent: "PressStart2P-Regular.woff", sans-serif;
     --wdth-main-text: 400;
     --wdth-title-text: 700; 
-    --bg-color: #FFFFFF;
-    --main-color: #000000;
+    --main-color1: #FFFFFF;
+    --main-color2: #000000;
     --shadow-color: #FFFFFF;
     --bg-cover-grad: #d3d3d3;
     --bg-gradient1: #e7e7e7;
     --bg-gradient2: #1a1a1a;
     --btn-text-color: #FFFFFF;
-    --bg-heart: #ff0000;
-    --wdth-phone: 100%;
-    --wdth-laptop: 696px;
 }
