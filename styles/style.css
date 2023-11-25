@@ -41,10 +41,6 @@
   background-color: var(--main-color1, #fff);
   background-size: cover;
   background-attachment: fixed;
-  /* background: fixed var(--main-color1, #fff)
-      repeating-linear-gradient(90deg, var(--bg-cover-grad), transparent 2px),
-    repeating-linear-gradient(0deg, var(--bg-cover-grad), transparent 2px),
-    linear-gradient(var(--bg-gradient1), var(--bg-gradient2)) center/cover; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,6 +129,11 @@
 
 .theme-menu__button:focus {
   outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus::after {
+  width: 100%;
 }
 
 .theme-menu {
@@ -380,6 +381,16 @@
   translate: -100% 0;
 }
 
+.save_button:focus {
+  outline: none;
+  border: 2px solid var(--main-color2, #000);
+}
+
+.save_button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--main-color2);
+}
+
 .img-floppy {
   z-index: 3;
   mix-blend-mode: difference;
@@ -448,6 +459,16 @@
   cursor: pointer;
 }
 
+.dialog__btn-close:focus{
+  outline: none;
+  border: 2px solid var(--main-color2, #000);
+}
+
+.dialog__btn-close:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--main-color2);
+}
+
 @media (width >= 375px) {
   .wdth-content {
     width: 696px;
@@ -456,10 +477,6 @@
   .header-title {
     margin-block-start: 127px;
     margin-block-end: 6px;
-  }
-
-  .content__card {
-    width: 696px;
   }
 
   .content__card-image {
