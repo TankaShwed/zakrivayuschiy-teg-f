@@ -44,8 +44,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(<path-to-image>), lightgray 0% 0% / 50px 50px repeat,
-    linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
 }
 
 .wdth-content {
@@ -469,13 +467,13 @@
   box-shadow: 2px 2px 0px 0px var(--main-color2);
 }
 
-@media (width >= 375px) {
+@media (width > 375px) {
   .wdth-content {
     width: 696px;
   }
 
   .header-title {
-    margin-block-start: 127px;
+    margin-block-start: 120px;
     margin-block-end: 6px;
   }
 
