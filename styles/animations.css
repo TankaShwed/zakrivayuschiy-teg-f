@@ -26,6 +26,15 @@
   animation: arrow 0.5s infinite ease-in-out alternate;
 }
 
+.theme-menu__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.theme-menu__button:hover::after {
+  width: 100%;
+}
+
 .theme-menu__button::after {
   transition: all 0.3s;
 }
@@ -36,6 +45,8 @@
 
 .card__like-button:focus-visible {
   animation-direction: normal;
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--main-color2);
 }
 
 @keyframes heart {
@@ -61,6 +72,7 @@
 .core {
   transition: fill 0.3s ease-in-out;
   transition-delay: 0.03s;
+  fill: var(--main-color1);
 }
 
 .sparks {
@@ -70,21 +82,25 @@
 .main-body {
   transition: fill 0.05s ease-in-out;
   transition-delay: 0.3s;
+  fill: var(--main-color1);
 }
 
 .like-icon.is-liked .main-body {
   transition: fill 0.3s ease-in-out;
   transition-delay: 0.06s;
+  fill: #ff0000;
 }
 
 .like-icon.is-liked .contour {
   transition: fill 0.3s ease-in-out;
   transition-delay: 0.06s;
+  fill: #ff0000;
 }
 
 .like-icon.is-liked .core {
   transition: fill 0.3s ease-in-out;
   transition-delay: 0.03s;
+  fill: #ff0000;
 }
 
 @keyframes sparks {
@@ -100,12 +116,15 @@
 
 .card__like-button::before {
   transition: translate 0.5s ease-in-out;
+  translate: -100% 0;
 }
 
 .save_button::before {
   transition: translate 0.5s ease-in-out;
+  translate: -100% 0;
 }
 
 .dialog__btn-close::before {
   transition: translate 0.5s ease-in-out;
+  translate: -100% 0;
 }

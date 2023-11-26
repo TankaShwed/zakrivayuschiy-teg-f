@@ -111,15 +111,6 @@
   background-color: var(--main-color2);
 }
 
-.theme-menu__button:hover {
-  cursor: pointer;
-  opacity: 0.6;
-}
-
-.theme-menu__button:hover::after {
-  width: 100%;
-}
-
 .theme-menu__button:disabled {
   opacity: 0.6;
 }
@@ -283,27 +274,7 @@
   cursor: pointer;
 }
 
-.core {
-  fill: var(--main-color1);
-}
-
-.main-body {
-  fill: var(--main-color1);
-}
-
 .card__icon-button:active .main-body{
-  fill: #ff0000;
-}
-
-.like-icon.is-liked .core {
-  fill: #ff0000;
-}
-
-.like-icon.is-liked .contour {
-  fill: #ff0000;
-}
-
-.like-icon.is-liked .main-body{
   fill: #ff0000;
 }
 
@@ -339,17 +310,11 @@
   border: 2px solid var(--main-color2, #000);
 }
 
-.card__like-button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px 0px 0px var(--main-color2);
-}
-
 .card__like-button::before {
   content: "";
   position: absolute;
   inset: 0;
   background-color: var(--main-color2);
-  translate: -100% 0;
 }
 
 .card__like-button:hover::before{
@@ -401,7 +366,6 @@
   position: absolute;
   inset: 0;
   background-color: var(--main-color2);
-  translate: -100% 0;
 }
 
 .save_button:focus {
@@ -471,7 +435,6 @@
   position: absolute;
   inset: 0;
   background-color: var(--main-color2);
-  translate: -100% 0;
 }
 
 .dialog__btn-close:hover::before {
