@@ -47,7 +47,8 @@
 }
 
 .wdth-content {
-  max-width: 100vi;
+  width: 100%;
+  max-width: clamp(375px, 100%, 700px);
 }
 
 /*header*/
@@ -59,7 +60,6 @@
   background-color: var(--main-color1);
   margin-block-start: 100px;
   margin-block-end: 100px;
-  width: 100%;
   border: 2px solid var(--main-color2);
   font-family: "Press Start 2P", sans-serif;
   text-transform: uppercase;
@@ -154,7 +154,6 @@
   background-color: var(--main-color1);
   border: 2px solid var(--main-color2);
   margin-block-end: 50px;
-  width: 100vi;
 }
 
 .content__card-title {
@@ -169,8 +168,11 @@
 }
 
 .content__card-image {
+  overflow: hidden;
   position: relative;
   background-size: cover;
+  display: block;
+  width: 100%;
 }
 
 .picture {
@@ -468,9 +470,6 @@
 }
 
 @media (width > 375px) {
-  .wdth-content {
-    width: 696px;
-  }
 
   .header-title {
     margin-block-start: 120px;
