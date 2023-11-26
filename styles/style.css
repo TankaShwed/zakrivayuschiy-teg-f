@@ -120,7 +120,10 @@
   width: 100%;
 }
 
-.theme-menu__button:disabled,
+.theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
 .theme-menu__button:active {
   opacity: 0.6;
 }
@@ -266,7 +269,11 @@
   border: 2px solid var(--main-color2);
 }
 
-.card__icon-button:hover .main-body,
+.card__icon-button:hover .main-body {
+  fill: var(--main-color2);
+  cursor: pointer;
+}
+
 .card__icon-button:hover .core {
   fill: var(--main-color2);
   cursor: pointer;
@@ -284,11 +291,23 @@
   fill: var(--main-color1);
 }
 
-.card__icon-button:active .main-body,
-.card__icon-button:active .core,
-.like-icon.is-liked .main-body,
-.like-icon.is-liked .contour,
+.card__icon-button:active .main-body{
+  fill: #ff0000;
+}
+
 .like-icon.is-liked .core {
+  fill: #ff0000;
+}
+
+.like-icon.is-liked .contour {
+  fill: #ff0000;
+}
+
+.like-icon.is-liked .main-body{
+  fill: #ff0000;
+}
+
+.card__icon-button:active .core{
   fill: #ff0000;
 }
 
@@ -333,7 +352,11 @@
   translate: -100% 0;
 }
 
-.card__like-button:hover::before,
+.card__like-button:hover::before{
+  transform: scale(1, 1);
+  translate: 0 0;
+}
+
 .save_button:hover:before {
   transform: scale(1, 1);
   translate: 0 0;
