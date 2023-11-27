@@ -260,6 +260,18 @@
   border: 2px solid var(--main-color2);
 }
 
+.card__icon-button:hover {
+  cursor: pointer;
+}
+
+.card__icon-button:hover .main-body {
+  cursor: pointer;
+}
+
+.card__icon-button:hover .core {
+  cursor: pointer;
+}
+
 /*like-button*/
 .card__like-button {
   width: 130px;
@@ -284,16 +296,6 @@
   position: absolute;
   inset: 0;
   background-color: var(--main-color2);
-}
-
-.card__like-button:hover::before {
-  transform: scale(1, 1);
-  translate: 0 0;
-}
-
-.save_button:hover:before {
-  transform: scale(1, 1);
-  translate: 0 0;
 }
 
 .save_button:hover {
@@ -404,10 +406,6 @@
   position: absolute;
   inset: 0;
   background-color: var(--main-color2);
-}
-
-.dialog__btn-close:hover::before {
-  translate: 0 0;
 }
 
 .dialog__btn-close:hover {

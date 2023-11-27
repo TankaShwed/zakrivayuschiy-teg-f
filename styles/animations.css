@@ -65,6 +65,41 @@
   animation-delay: 0.1s;
 }
 
+.card__icon-button:hover .main-body {
+  fill: var(--main-color2);
+}
+
+.card__like-button:hover::before {
+  transform: scale(1, 1);
+  translate: 0 0;
+}
+
+.save_button:hover:before {
+  transform: scale(1, 1);
+  translate: 0 0;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--main-color2);
+}
+
+.heart {
+  transform: scale(1);
+}
+
+.sparks {
+  opacity: 0;
+  transform: scale(1);
+}
+
+.card__icon-button:active .main-body {
+  fill: #ff0000;
+}
+
+.card__icon-button:active .core {
+  fill: #ff0000;
+}
+
 .contour {
   transition: fill 0.1s linear;
 }
@@ -129,33 +164,6 @@
   translate: -100% 0;
 }
 
-.card__icon-button:hover .main-body {
-  fill: var(--main-color2);
-  cursor: pointer;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--main-color2);
-  cursor: pointer;
-}
-
-.card__icon-button:hover {
-  cursor: pointer;
-}
-
-.card__icon-button:active .main-body {
-  fill: #ff0000;
-}
-
-.card__icon-button:active .core {
-  fill: #ff0000;
-}
-
-.heart {
-  transform: scale(1);
-}
-
-.sparks {
-  opacity: 0;
-  transform: scale(1);
+.dialog__btn-close:hover::before {
+  translate: 0 0;
 }
