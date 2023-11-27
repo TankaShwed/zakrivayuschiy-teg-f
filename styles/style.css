@@ -260,37 +260,6 @@
   border: 2px solid var(--main-color2);
 }
 
-.card__icon-button:hover .main-body {
-  fill: var(--main-color2);
-  cursor: pointer;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--main-color2);
-  cursor: pointer;
-}
-
-.card__icon-button:hover {
-  cursor: pointer;
-}
-
-.card__icon-button:active .main-body{
-  fill: #ff0000;
-}
-
-.card__icon-button:active .core{
-  fill: #ff0000;
-}
-
-.heart {
-  transform: scale(1);
-}
-
-.sparks {
-  opacity: 0;
-  transform: scale(1);
-}
-
 /*like-button*/
 .card__like-button {
   width: 130px;
@@ -317,7 +286,7 @@
   background-color: var(--main-color2);
 }
 
-.card__like-button:hover::before{
+.card__like-button:hover::before {
   transform: scale(1, 1);
   translate: 0 0;
 }
@@ -445,7 +414,7 @@
   cursor: pointer;
 }
 
-.dialog__btn-close:focus{
+.dialog__btn-close:focus {
   outline: none;
   border: 2px solid var(--main-color2, #000);
 }
@@ -456,7 +425,6 @@
 }
 
 @media (width > 375px) {
-
   .header-title {
     margin-block-start: 120px;
     margin-block-end: 6px;

@@ -128,3 +128,34 @@
   transition: translate 0.5s ease-in-out;
   translate: -100% 0;
 }
+
+.card__icon-button:hover .main-body {
+  fill: var(--main-color2);
+  cursor: pointer;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--main-color2);
+  cursor: pointer;
+}
+
+.card__icon-button:hover {
+  cursor: pointer;
+}
+
+.card__icon-button:active .main-body {
+  fill: #ff0000;
+}
+
+.card__icon-button:active .core {
+  fill: #ff0000;
+}
+
+.heart {
+  transform: scale(1);
+}
+
+.sparks {
+  opacity: 0;
+  transform: scale(1);
+}
