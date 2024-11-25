@@ -1,6 +1,3 @@
-# zakrivayuschiy-teg-f
-Проект "Закрывающий тег"
+# Проект "Закрывающий тег"
 
-https://github.com/TankaShwed/zakrivayuschiy-teg-f
-
-https://tankashwed.github.io/zakrivayuschiy-teg-f/
+[Ссылка](https://tankashwed.github.io/zakrivayuschiy-teg-f/)
